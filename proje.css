@@ -1,0 +1,57 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.anasayfa{
+    background-color: aqua;
+    background-size: auto;
+}
+
+.anasayfa .secenekler{
+    background-color: #5f0aff 0.9;
+    width: 100%;
+    height: 70px;
+}
+
+.secenekler li{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+    margin:0 40px;
+    line-height: 70px;
+}
+
+.secenekler ul{
+    float: left;
+    margin-left: 20px;
+}
+
+.secenekler ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 70px;
+}
+
+.secenekler ul li a.active,
+.secenekler ul li a:hover{
+    background: #ea7909 ;
+    text-decoration: none;
+}
+
+.hakkimda h1{
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center; 
+    padding-top: 50px; 
+    padding-bottom: 30px;
+}
+
+.hakkimda p{
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center; 
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
