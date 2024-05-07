@@ -41,17 +41,36 @@
 }
 
 .hakkimda h1{
+    color: bisque;
+    font-size: 75px;
+    font-family: Cursive, sans-serif;
     width: 80%;
     margin: 0 auto; 
     text-align: center; 
     padding-top: 50px; 
     padding-bottom: 30px;
+    border: 2px solid #ff0101;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
 }
 
 .hakkimda p{
+    font-size: 25px;
+    color:bisque;
+    font-family: Fantasy;
     width: 80%;
     margin: 0 auto; 
     text-align: center; 
     padding-top: 5px; 
     padding-bottom: 5px;
+    border: 2px solid #6c0505;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hakkimda {
+    background-image: url(hakkimdafoto.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
 }
