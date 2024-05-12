@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hüseyin Aydın</title>
-    <link rel="stylesheet" href="proje.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+           overflow: hidden;
+         }
+   </style>
+   <link rel="stylesheet" href="proje.css">
 </head>
 <body>
-    <div class="anasayfa">
-        <div class="secenekler">
-            <ul>
-                <li><a href="mirasimiz.html">Mirasımız</a></li>
-                <li><a href="sehrim.html">Şehrim</a></li>  
-                <li><a href="ilgialanim.html">İlgi Alanlarım</a></li>
-                <li><a href="ozgecmis.html">Özgeçmiş</a></li>
-                <li><a href="webproje.html">Hakkımda</a></li>     
-            </ul>     
-            <li><a href="login.html" >Giriş</a></li>
+    <nav>
+        <button id="menu" onclick="menuFunction()" class="menu">Hakkımda <i id="arrow" class="fa-solid fa-caret-down"></i></button>
+        
+        <div class="nav">
+          <ul>
+            <li><a href="index.html">Hakkımda</a></li>
+            <li><a href="ilgialanim.html">İlgi Alanlarım</a></li>
+            <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+            <li style="color: green;">Şehrim</li>
+            <li><a href="mirasimiz.html">Mirasımız</a></li>
+            <li>İletişim</li>
+          </ul>
         </div>
-    </div>
-
+        <a href="login.html"><div class="login"> <span style="color: green; margin-right: 10px;">Giriş yap</span> / Kayıt ol</div></a>
+      </nav>
 
     <script src="js/bootstrap.min.js"></script>
 </body>
