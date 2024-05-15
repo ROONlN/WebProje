@@ -147,7 +147,7 @@ button{
 }
 
 .left{
-    display: flex;
+    display: block;
     padding-left: 18em;
     justify-content: center;
     flex-direction: column;
