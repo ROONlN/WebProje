@@ -197,6 +197,20 @@ i:hover{
 
 }
 
+.image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.custom-img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .custom-img {
+    transform: scale(1.2);
+}
 
 
 /* ---------------------v CONTACT v--------------------------- */
