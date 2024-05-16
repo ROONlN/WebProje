@@ -8,8 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
          body {
-            overflow: hidden;
-          }
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: #18354A;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-logo {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .fb{
+          color: #F0F0F0;
+        }
     </style>
     <link rel="stylesheet" href="proje.css">
 </head>
@@ -31,6 +64,32 @@
     <a href="login.html"><div class="login"> <span style="color: green; margin-right: 10px;">Giriş yap</span> / Kayıt ol</div></a>
   </nav>
 
+  <header>
+    <h1 class="fb">Fenerbahçe Spor Kulübü</h1>
+</header>
+<main>
+    <div class="content">
+        <img src="Fenerbahçe_SK.png" alt="Fenerbahçe Logo" class="team-logo">
+        <p><strong>Fenerbahçe Spor Kulübü</strong>, 1907 yılında İstanbul'da kurulmuş olan ve Türkiye'nin en köklü ve başarılı spor kulüplerinden biridir. Sarı lacivertli renkleri ile bilinir.</p>
+        <div>
+            <h2 class="section-title">Tarihçe</h2>
+            <p>Fenerbahçe, futbol başta olmak üzere basketbol, voleybol, yüzme, atletizm ve birçok farklı branşta faaliyet göstermektedir. Kulübün futbol takımı, Süper Lig'de birçok şampiyonluk kazanmış ve UEFA turnuvalarında önemli başarılara imza atmıştır.</p>
+        </div>
+        <div>
+            <h2 class="section-title">Stadyum</h2>
+            <p>Fenerbahçe'nin maçlarını oynadığı stadyum, Kadıköy'de bulunan ve "Şükrü Saracoğlu Stadyumu" olarak bilinen Ülker Stadyumu'dur. Bu stadyum, 50.000'den fazla seyirci kapasitesine sahiptir ve modern tesisleri ile dikkat çeker.</p>
+        </div>
+        <div>
+            <h2 class="section-title">Başarılar</h2>
+            <ul>
+                <li>Süper Lig Şampiyonluğu: 28 kez</li>
+                <li>Türkiye Kupası: 6 kez</li>
+                <li>Türkiye Süper Kupa: 9 kez</li>
+                <li>Avrupa Ligi'nde Yarı Final: 2012-2013 sezonu</li>
+            </ul>
+        </div>
+    </div>
+</main>
     <script src="js/md.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

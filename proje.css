@@ -85,8 +85,8 @@ a{
 /* -------------------------------------------- */
 
 header{
-    visibility: hidden;
     justify-content: center;
+    background-color: #101214;
 }
 
 header a{
