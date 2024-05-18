@@ -171,9 +171,9 @@ button{
 }
 
 .container{
-    width: min-content; 
+    width: max-content; 
     justify-self:end;
-    margin: 0;
+    
 }
 
 i{
