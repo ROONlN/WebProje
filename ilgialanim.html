@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
+        body {
+            padding-top: 20px;
+        }
         
+        .movie-card {
+            margin: 10px 0;
+        }
+        .movie-card img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
    </style>
    <link rel="stylesheet" href="proje.css">
 </head>
@@ -28,7 +38,63 @@
         </div>
         <a href="login.html"><div class="login"> <span style="color: green; margin-right: 10px;">Giriş yap</span> / Kayıt ol</div></a>
       </nav>
-
+      
+      <div class="container">
+        <h1 class="text-center">Film Ara</h1>
+        <div class="form-group">
+            <input type="text" id="searchInput" class="form-control" placeholder="Film adı girin...">
+        </div>
+        <button id="searchButton" class="btn btn-primary">Ara</button>
+        <div id="movies" class="mt-4"></div>
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      const apiKey = '50cd05fd58d38106fbafdd4151f9315b';
+
+      document.getElementById('searchButton').addEventListener('click', () => {
+          const query = document.getElementById('searchInput').value;
+          searchMovies(query);
+      });
+
+      function searchMovies(query) {
+          axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`)
+              .then(response => {
+                  const movies = response.data.results;
+                  displayMovies(movies);
+              })
+              .catch(error => {
+                  console.error('Error fetching data:', error);
+              });
+      }
+
+      function displayMovies(movies) {
+          const moviesContainer = document.getElementById('movies');
+          moviesContainer.innerHTML = '';
+          movies.forEach(movie => {
+              const movieElement = document.createElement('div');
+              movieElement.classList.add('movie-card', 'd-flex', 'align-items-center', 'border', 'p-2');
+
+              const moviePoster = document.createElement('img');
+              moviePoster.src = movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : 'https://via.placeholder.com/100';
+              movieElement.appendChild(moviePoster);
+
+              const movieInfo = document.createElement('div');
+
+              const movieTitle = document.createElement('h5');
+              movieTitle.textContent = movie.title;
+              movieInfo.appendChild(movieTitle);
+
+              const movieOverview = document.createElement('p');
+              movieOverview.textContent = movie.overview;
+              movieInfo.appendChild(movieOverview);
+
+              movieElement.appendChild(movieInfo);
+              moviesContainer.appendChild(movieElement);
+          });
+      }
+  </script>
 </body>
 </html>
